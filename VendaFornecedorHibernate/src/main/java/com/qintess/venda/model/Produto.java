@@ -29,7 +29,7 @@ public class Produto implements Serializable{
 	@Column(length = 45)
 	private String foto;
 
-	@OneToMany(fetch = FetchType.LAZY
+	@OneToMany(fetch = FetchType.EAGER
 			  ,mappedBy = "produto")
 	List<FornecedorProduto> listaFornecedor = new ArrayList<>();
 
