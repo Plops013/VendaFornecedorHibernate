@@ -26,10 +26,10 @@ public class GenericDao<T, ID extends Serializable> {
 	
 	public T persistir(T entidade) {
 		try (Session ses = getSession()){
-		session.getTransaction().begin();
-		session.persist(entidade);
-		session.flush();
-		session.getTransaction().commit();
+		ses.getTransaction().begin();
+		ses.persist(entidade);
+		ses.flush();
+		ses.getTransaction().commit();
 		return entidade;
 		} catch (Exception e){
 			e.printStackTrace();

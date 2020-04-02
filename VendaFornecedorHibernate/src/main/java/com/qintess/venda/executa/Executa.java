@@ -26,7 +26,7 @@ public class Executa {
 		//id Cliente, desconto, formaPagamento, data
 		Venda venda = new Venda(1, 10, 1, LocalDate.now());
 		vendaDao.persistir(venda);
-		
+
 		GenericDao<Produto, Integer> prodDao = new GenericDao<Produto, Integer>(Produto.class);
 		venda.addProduto(prodDao.encontrarPorId(2), 3);
 		venda.addProduto(prodDao.encontrarPorId(3), 3);

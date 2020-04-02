@@ -31,7 +31,7 @@ public class Venda implements Serializable{
 	private LocalDate data;
 
 	@OneToMany (cascade = CascadeType.ALL,
-			fetch = FetchType.EAGER,
+			fetch = FetchType.LAZY,
 			mappedBy = "venda",
 			orphanRemoval = true)
 	private List<VendaItens> listaItens = new ArrayList<>();
